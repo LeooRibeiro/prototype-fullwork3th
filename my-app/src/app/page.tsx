@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Card from "./components/Card";
+
 export default function Home() {
   return (
     <div className="max-w-[1420px] mx-auto">
@@ -19,7 +21,7 @@ export default function Home() {
             <li className="">
               <a
                 href=""
-                className="border-2 border-gray-600 py-3 px-6 cursor-pointer hover:bg-violet-400 duration-209"
+                className="border-2 border-gray-600 py-3 px-6 cursor-pointer hover:bg-amber-500 duration-209"
               >
                 CONTATO
               </a>
@@ -32,7 +34,7 @@ export default function Home() {
         <h1 className="mt-3 text-6xl font-normal">
           Transforme sua gestão adminstrativa
         </h1>
-        <button className="mt-10 border-2 py-3 px-6 bg-purple-400 hover:border-purple-400 duration-200">
+        <button className="mt-10 border-2 py-3 px-6 bg-amber-500 duration-200">
           ACESSAR SERVIÇOS
         </button>
         <Image
@@ -61,7 +63,13 @@ export default function Home() {
           Terceirização de serviços administrativos
         </h2>
         {/* grid images */}
-        <div></div>
+        <div className="grid grid-cols-2 w-9/12 justify-items-center gap-10 mt-10">
+          <Card/>
+          <Card/>
+          <div className="col-span-2">
+          <Card/>
+          </div>
+        </div>
       </section>
     </div>
   );
