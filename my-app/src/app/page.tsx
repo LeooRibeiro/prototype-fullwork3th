@@ -64,10 +64,22 @@ export default function Home() {
         </h2>
         {/* grid images */}
         <div className="grid grid-cols-2 w-9/12 justify-items-center gap-10 mt-10">
-          <Card/>
-          <Card/>
+          <Card
+            titulo="Gestão administrativa"
+            descricao="Otimize suas operações com nossa gestão administrativa eficiente."
+            image="/images/imgServico1.jpg"
+          />
+          <Card
+            titulo="Controle de processos"
+            descricao="Otimeze seu tempo, e faça melhorias no dia a dia de seu trabalho."
+            image="/images/imgServico2.jpg"
+          />
           <div className="col-span-2">
-          <Card/>
+            <Card
+              titulo="Eficacia operacional"
+              descricao="recursos solidos e prontos para usar em diversas situações."
+              image="/images/imgServico3.jpg"
+            />
           </div>
         </div>
       </section>
