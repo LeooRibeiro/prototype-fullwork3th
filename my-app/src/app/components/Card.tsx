@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Link from "next/link";
 interface CardProps {
   titulo: string;
   descricao: string;
@@ -22,9 +22,11 @@ const Card: React.FC<CardProps> = ({ titulo, descricao, image }) => {
             <p className="text-sm text-gray-700 mb-2">
               {descricao}
             </p>
-            <a href="#" className="text-sm text-blue-600 hover:underline">
+            <Link href="./services">
+            <p className="text-sm text-blue-600 hover:underline">
               Saíba mais
-            </a>
+            </p>
+            </Link>
           </div>
         </div>
       );
