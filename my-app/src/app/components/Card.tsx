@@ -8,7 +8,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ titulo, descricao, image }) => {
     return (
-        <div className="relative w-90 h-[480px] border-15 border-white shadow-2xl overflow-hidden">
+        <div className="relative max-w-90 w-90 h-[488px] border-15 border-white shadow-2xl overflow-hidden">
           {/* Imagem de fundo */}
           <img
             src={image}

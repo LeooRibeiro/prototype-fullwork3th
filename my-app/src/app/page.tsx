@@ -4,10 +4,11 @@ import Card from "./components/Card";
 
 export default function Home() {
   return (
-    <div className="max-w-[1420px] mx-auto">
+    <div className="max-w-[1420px] grid grid-cols-1 mx-auto">
       <header className="flex h-30 items-center justify-between shadow-lg shadow-gray-300 py-4 px-20">
         <h1 className="font-semibold text-4xl">YourWork</h1>
-        <div className="w-auto">
+        {/* Menu desktop/mobile */}
+        <div className="w-auto hidden md:block">
           <ul className="flex items-center gap-10 text-lg font-semibold h-auto w-full">
             <li className="hover:text-orange-300 duration-200">
               <a href="">INÍCIO</a>
@@ -29,9 +30,10 @@ export default function Home() {
           </ul>
         </div>
       </header>
+      {/* section for apresentation */}
       <section className="mt-20 flex flex-col justify-center items-center text-center">
         <p className="text-lg font-semibold">SOLUÇÕES EFECIENTES</p>
-        <h1 className="mt-3 text-6xl font-normal">
+        <h1 className="mt-3 text-4xl w-7/12 md:text-6xl md:w-10/12 font-normal">
           Transforme sua gestão adminstrativa
         </h1>
         <button className="cursor-pointer mt-10 border-2 border-orange-200 py-3 text-white font-semibold px-6 bg-orange-300 duration-200">
@@ -48,8 +50,10 @@ export default function Home() {
       {/* About us */}
       <section className="mt-20 flex flex-col justify-center items-center text-center">
         <p className="font-semibold">QUEM SOMOS</p>
-        <h2 className="text-5xl font-normal">Sua solução em terceirização </h2>
-        <p className="mt-3 max-w-5/12">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal">
+          Sua solução em terceirização{" "}
+        </h2>
+        <p className="mt-3 max-w-6/12">
           Atuamos com excelência na prestação de serviços terceirizados nas
           áreas administrativa e de tecnologia, contribuindo para a otimização
           de processos e o desenvolvimento estratégico de nossos parceiros.
@@ -58,14 +62,14 @@ export default function Home() {
           SAIBA MAIS
         </button>
       </section>
-      {/* Services */}
+      {/* For Services */}
       <section className="pt-10 mt-10 border-t-2 border-gray-300 flex flex-col justify-center items-center text-center">
         <p className="text-orange-300 font-semibold">SOLUÇÕES PRATICAS</p>
-        <h2 className="mt-3 text-5xl max-w-150">
+        <h2 className="mt-3 text-3xl max-w-7/12 sm:text-4xl md:text-5xl md:max-w-9/12 lg:max-w-6/12">
           Terceirização de serviços administrativos
         </h2>
         {/* grid images */}
-        <div className="grid grid-cols-2 w-9/12 justify-items-center gap-10 mt-10">
+        <div className="grid grid-cols-1 grid-rows-3 lg:grid-cols-2 lg:grid-rows-2 w-9/12 justify-items-center gap-10 mt-10">
           <Card
             titulo="Gestão administrativa"
             descricao="Otimize suas operações com nossa gestão administrativa eficiente."
@@ -76,7 +80,7 @@ export default function Home() {
             descricao="Otimeze seu tempo, e faça melhorias no dia a dia de seu trabalho."
             image="/images/imgServico2.jpg"
           />
-          <div className="col-span-2">
+          <div className="lg:col-span-2">
             <Card
               titulo="Eficacia operacional"
               descricao="recursos solidos e prontos para usar em diversas situações."
@@ -116,26 +120,14 @@ export default function Home() {
         </div>
       </section>
       {/* Contact */}
-      <section className="grid grid-cols-2 w-8/12 mx-auto pt-10 mt-10 justify-items-center">
-        <div className="h-auto w-full">
-          <p className="text-orange-300 font-semibold text-md">FALE CONOSCO</p>
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-8/12 mx-auto pt-10 mt-10 justify-items-center">
+        <div className="lg:col-span-2 text-center">
+          <p className="text-orange-300 font-semibold text-md text-center">FALE CONOSCO</p>
           <h2 className="font-medium text-4xl">
             Estamos aqui para ajudar você!
           </h2>
-          <a className="block mt-5">atendimento@yourwork.org.br</a>
-          <h3 className="mt-5 text-lg font-semibold">Localização</h3>
-          <p>
-            <a>São Paulo, SP - BR</a>
-          </p>
-          <div className="w-full">
-            <iframe
-            className="mt-10 w-100 h-65"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d607.1649386690797!2d-45.447043551655!3d-23.686905297958997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1752261850067!5m2!1spt-BR!2sbr"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
         </div>
-        <div className="w-full">
+        <div className="mt-5 w-full">
           <form className="flex flex-col">
             <label className="font-semibold">Nome</label>
             <input
@@ -167,6 +159,24 @@ export default function Home() {
               Enviar
             </button>
           </form>
+        </div>
+        <div className="h-auto w-full mt-5">
+          <p className="font-medium text-4xl">Atendemos toda a semana:</p>
+          <div className="mt-5">
+            <p>Segunda a Sexta: 9:00am - 16:00pm</p>
+            <p>Sabado e Domingo: 8:00am - 14:00pm</p>
+          </div>
+          <h2 className="font-medium text-4xl mt-10">Localização</h2>
+          <p>
+            <a>São Paulo, SP - BR</a>
+          </p>
+          <div className="w-full">
+            <iframe
+              className="mt-10 w-100 h-65"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d607.1649386690797!2d-45.447043551655!3d-23.686905297958997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1752261850067!5m2!1spt-BR!2sbr"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </section>
       <footer className="w-full h-40 mt-25 bg-orange-300 p-5">
