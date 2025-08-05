@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 import Link from "next/link";
 
@@ -82,7 +83,7 @@ export default function Home() {
         </div>
       </section>
       {/* Companies */}
-      <section className="border-gray-400 border-t-1 border-b-1 pb-15 pt-15 mt-20 flex flex-col justify-center items-center text-center">
+      <section className="border-gray-300 border-t-1 border-b-1 pb-15 pt-15 mt-20 flex flex-col justify-center items-center text-center">
         <p className="font-semibold text-orange-300 text-2xl">Clientes</p>
         <h2 className="text-5xl font-normal mt-5">
           Facilitando o trabalho de muitos
@@ -176,15 +177,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="w-full h-40 mt-25 bg-orange-300 p-5">
-        <div className="gap-10 flex items-center">
-          <a>AGENDAR CONSULTA</a>
-          <a>INTAKE COMPLETO</a>
-        </div>
-        <p className="mt-15 text-gray-700 text-center">
-          © 2023 YourWork. Todos os direitos reservados.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

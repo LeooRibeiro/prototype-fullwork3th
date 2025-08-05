@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <header className="w-full h-20 flex items-center justify-between shadow-lg shadow-gray-300 py-4 px-6 relative">
-      <h1 className="font-semibold text-3xl">YourWork</h1>
+      <h1 className="font-semibold text-3xl flex">Our<span className="rotate-340 block">W</span>ork</h1>
 
       {/* Botão de menu visível só no mobile */}
       <button
